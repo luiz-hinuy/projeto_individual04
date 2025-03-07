@@ -1,0 +1,27 @@
+// Define área da tela do jogo
+const larguraJogo = 700
+const alturaJogo = 850
+
+// Importa classes 
+import Menu from "./scenes/menu.js";
+import Fase from "./scenes/fase.js";
+
+// Configurações das cenas
+const config = {
+    type: Phaser.AUTO,
+    width: larguraJogo,
+    height: alturaJogo,
+
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: {y: 300},
+            debug: false
+        }
+    },
+
+    scene: [Menu, Fase] // Adicione as cenas ao jogo
+};
+
+// Intancia o jogo
+const game = new Phaser.Game(config);
