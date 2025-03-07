@@ -1,10 +1,10 @@
+// Importa classes 
+import { Menu } from "./scenes/menu.js";
+import { Fase } from "./scenes/fase.js";
+
 // Define área da tela do jogo
 const larguraJogo = 700
 const alturaJogo = 850
-
-// Importa classes 
-import Menu from "./scenes/menu.js";
-import Fase from "./scenes/fase.js";
 
 // Configurações das cenas
 const config = {
@@ -24,4 +24,4 @@ const config = {
 };
 
 // Intancia o jogo
-const game = new Phaser.Game(config);
+export default new Phaser.Game(config);
