@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Individual</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <style> body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; } </style>
+</head>
+
+<body>
+    <script type='module'>
+        // Define área da tela do jogo
+        const larguraJogo = 700
+        const alturaJogo = 850
+
+        // Importa classes 
+        import Menu from "./scenes/menu.js";
+        import Fase from "./scenes/fase.js";
+
+        // Configurações das cenas
+        const config = {
+            type: Phaser.AUTO,
+            width: larguraJogo,
+            height: alturaJogo,
+
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: {y: 300},
+                    debug: false
+                }
+            },
+
+            scene: [Menu, Fase] // Adicione as cenas ao jogo
+        };
+
+        // Intancia o jogo
+        const game = new Phaser.Game(config);
+
+    </script>
+</body>
+</html>
